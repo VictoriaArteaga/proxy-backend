@@ -1,4 +1,15 @@
 package com.backend.loggingproxy.logging;
 
-public class LogEntry {
-}
+import java.time.Instant;
+
+public record LogEntry(
+        String requestId,
+        String serviceId,
+        String operation,
+        long durationMs,
+        String status,
+        Instant timestamp,
+        Object[] params,
+        Object response,
+        String errorTrace
+) {}
