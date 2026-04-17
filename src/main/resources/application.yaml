@@ -1,3 +1,19 @@
+server:
+  port: 8080
+
 spring:
   application:
-    name: loggingproxy
+    name: logging-proxy
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+app:
+  cors:
+    allowed-origins: http://localhost:5173
+  payment:
+    failure-rate: 0.10
+  logs:
+    max-size: 10000
+  metrics:
+    error-threshold: 0.15
