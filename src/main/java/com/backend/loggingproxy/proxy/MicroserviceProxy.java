@@ -1,4 +1,6 @@
 package com.backend.loggingproxy.proxy;
 
-public class MicroserviceProxy {
+public interface MicroserviceProxy<T> {
+
+    T execute(String operation, Object... params);
 }
