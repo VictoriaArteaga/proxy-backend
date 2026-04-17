@@ -1,4 +1,12 @@
 package com.backend.loggingproxy.dto;
 
-public class LogFilterRequest {
-}
+import java.time.Instant;
+
+public record LogFilterRequest(
+        String service,
+        String status,
+        Instant from,
+        Instant to,
+        int page,
+        int size
+) {}

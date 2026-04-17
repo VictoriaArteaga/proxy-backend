@@ -1,4 +1,11 @@
 package com.backend.loggingproxy.dto;
 
-public class PagedResponse {
-}
+import java.util.List;
+
+public record PagedResponse<T>(
+        List<T> content,
+        int page,
+        int size,
+        int totalElements,
+        int totalPages
+) {}
